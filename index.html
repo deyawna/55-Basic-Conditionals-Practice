@@ -1,0 +1,95 @@
+<!DOCTYPE html> <html><head>
+        <title>5.5 Basic Conditionals Practice </title>
+    <style></style></head>
+    <body>
+
+        <h2>Second Grade End of Year Test </h2>
+
+
+        <div class="english-div">
+            <h3>1. English Language Arts</h3>
+            <p>What is the abbreviation for Monday?</p>
+            <input class="english" placeholder="your answer">
+            <button class="english-button">Submit</button>
+            <div class="english-message"></div>
+        </div>
+
+        <div class="math-div">
+            <h3>2. Math</h3>
+            <p>What is 10 + 10 + 10?</p>
+            <input class="math" placeholder="your answer">
+            <button class="math-button">Submit</button>
+            <div class="math-message"></div>
+        </div>
+
+
+        <div class="ss-div">
+            <h3>3. Social Studies</h3>
+            <p>What is the capital of New York?</p>
+            <input class="social-studies" placeholder="your answer">
+            <button class="ss-button">Submit</button>
+            <div class="ss-message"></div>
+        </div>
+
+
+        <div class="sci-div">
+            <h3>4. Science </h3>
+            <p>Is ice a solid, liquid, or gas?</p>
+            <input class="science" placeholder="your answer">
+            <button class="science-button">Submit</button>
+            <div class="science-message"></div>
+        </div>
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var englishButton = document.querySelector(".english-button");
+var ssButton = document.querySelector(".ss-button");
+var mathButton = document.querySelector(".math-button");
+var scienceButton = document.querySelector(".science-button"); // 1. English Section:
+
+englishButton.onclick = function () {
+  var englishInput = document.querySelector(".english").value; //write English if-else conditional statement below
+
+  if (englishInput === "Mon") {
+    document.querySelector(".english-message").innerHTML = "Correct!";
+  } else {
+    document.querySelector(".english-messae").innerHTML = "Wrong Answer";
+  }
+}; // 2. Math section
+
+
+mathButton.onclick = function () {
+  var mathInput = Number(document.querySelector(".math").value); //write math if-else conditional statement below
+
+  if (mathInput === 30) {
+    document.querySelector(".math-message").innerHTML = "Correct!";
+  } else {
+    document.querySelector(".math-message").innerHTML = "Wrong Answer";
+  }
+}; // 3. Social Studies section
+
+
+ssButton.onclick = function () {
+  var ssInput = document.querySelector(".social-studies").value; //write SS if-else conditional statement below
+
+  if (ssInput === "Albany") {
+    document.querySelector(".ss-message").innerHTML = "Correct!";
+  } else {
+    document.querySelector(".ss-message").innerHTML = "Wrong Answer";
+  }
+}; // 4. Science section
+
+
+scienceButton.onclick = function () {
+  var scienceInput = document.querySelector(".science").value;
+
+  if (scienceInput === "Solid") {
+    document.querySelector(".science-message").innerHTML = "Correct!";
+  } else {
+    document.querySelector(".science-message").innerHTML = "Wrong Answer";
+  }
+}; //first, declare a variable that stores the value of the user input in the science section (look at line 9 for an example!)
+//then, write science if-else conditional statement below
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImVuZ2xpc2hCdXR0b24iLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJzc0J1dHRvbiIsIm1hdGhCdXR0b24iLCJzY2llbmNlQnV0dG9uIiwib25jbGljayIsImVuZ2xpc2hJbnB1dCIsInZhbHVlIiwiaW5uZXJIVE1MIiwibWF0aElucHV0IiwiTnVtYmVyIiwic3NJbnB1dCIsInNjaWVuY2VJbnB1dCJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsYUFBYSxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsaUJBQXZCLENBQXBCO0FBQ0EsSUFBSUMsUUFBUSxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsWUFBdkIsQ0FBZjtBQUNBLElBQUlFLFVBQVUsR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLGNBQXZCLENBQWpCO0FBQ0EsSUFBSUcsYUFBYSxHQUFHSixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsaUJBQXZCLENBQXBCLEMsQ0FFQTs7QUFFQUYsYUFBYSxDQUFDTSxPQUFkLEdBQXlCLFlBQVc7QUFDaEMsTUFBSUMsWUFBWSxHQUFHTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsRUFBbUNNLEtBQXRELENBRGdDLENBRWhDOztBQUNBLE1BQUlELFlBQVksS0FBSyxLQUFyQixFQUE0QjtBQUN4Qk4sSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLGtCQUF2QixFQUEyQ08sU0FBM0MsR0FBdUQsVUFBdkQ7QUFDSCxHQUZELE1BRU87QUFDSFIsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLGlCQUF2QixFQUEwQ08sU0FBMUMsR0FBc0QsY0FBdEQ7QUFDSDtBQUNKLENBUkQsQyxDQVdBOzs7QUFFQUwsVUFBVSxDQUFDRSxPQUFYLEdBQXNCLFlBQVc7QUFDN0IsTUFBSUksU0FBUyxHQUNUQyxNQUFNLENBQUNWLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixPQUF2QixFQUFnQ00sS0FBakMsQ0FEVixDQUQ2QixDQUk3Qjs7QUFDQSxNQUFJRSxTQUFTLEtBQUssRUFBbEIsRUFBc0I7QUFDbEJULElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixlQUF2QixFQUF3Q08sU0FBeEMsR0FBb0QsVUFBcEQ7QUFDSCxHQUZELE1BRU87QUFDSFIsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLGVBQXZCLEVBQXdDTyxTQUF4QyxHQUFvRCxjQUFwRDtBQUNIO0FBR0osQ0FaRCxDLENBY0E7OztBQUVBTixRQUFRLENBQUNHLE9BQVQsR0FBb0IsWUFBVztBQUMzQixNQUFJTSxPQUFPLEdBQUdYLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixpQkFBdkIsRUFBMENNLEtBQXhELENBRDJCLENBRTNCOztBQUNBLE1BQUlJLE9BQU8sS0FBSyxRQUFoQixFQUEwQjtBQUN0QlgsSUFBQUEsUUFBUSxDQUFDQyxhQUFULENBQXVCLGFBQXZCLEVBQXNDTyxTQUF0QyxHQUFrRCxVQUFsRDtBQUNILEdBRkQsTUFFTztBQUNIUixJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsYUFBdkIsRUFBc0NPLFNBQXRDLEdBQWtELGNBQWxEO0FBQ0g7QUFHSixDQVZELEMsQ0FZQTs7O0FBRUFKLGFBQWEsQ0FBQ0MsT0FBZCxHQUF5QixZQUFXO0FBQ2hDLE1BQUlPLFlBQVksR0FBR1osUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLEVBQW1DTSxLQUF0RDs7QUFDQSxNQUFJSyxZQUFZLEtBQUssT0FBckIsRUFBOEI7QUFDMUJaLElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixrQkFBdkIsRUFBMkNPLFNBQTNDLEdBQXVELFVBQXZEO0FBQ0gsR0FGRCxNQUVPO0FBQ0hSLElBQUFBLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixrQkFBdkIsRUFBMkNPLFNBQTNDLEdBQXVELGNBQXZEO0FBQ0g7QUFHSixDQVRELEMsQ0FVSTtBQUdBIiwic291cmNlc0NvbnRlbnQiOlsibGV0IGVuZ2xpc2hCdXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmVuZ2xpc2gtYnV0dG9uXCIpO1xubGV0IHNzQnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zcy1idXR0b25cIik7XG5sZXQgbWF0aEJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubWF0aC1idXR0b25cIik7XG5sZXQgc2NpZW5jZUJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc2NpZW5jZS1idXR0b25cIik7XG5cbi8vIDEuIEVuZ2xpc2ggU2VjdGlvbjpcblxuZW5nbGlzaEJ1dHRvbi5vbmNsaWNrID0gKGZ1bmN0aW9uKCkge1xuICAgIGxldCBlbmdsaXNoSW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmVuZ2xpc2hcIikudmFsdWU7XG4gICAgLy93cml0ZSBFbmdsaXNoIGlmLWVsc2UgY29uZGl0aW9uYWwgc3RhdGVtZW50IGJlbG93XG4gICAgaWYgKGVuZ2xpc2hJbnB1dCA9PT0gXCJNb25cIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmVuZ2xpc2gtbWVzc2FnZVwiKS5pbm5lckhUTUwgPSBcIkNvcnJlY3QhXCI7XG4gICAgfSBlbHNlIHtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5lbmdsaXNoLW1lc3NhZVwiKS5pbm5lckhUTUwgPSBcIldyb25nIEFuc3dlclwiO1xuICAgIH1cbn0pO1xuXG5cbi8vIDIuIE1hdGggc2VjdGlvblxuXG5tYXRoQnV0dG9uLm9uY2xpY2sgPSAoZnVuY3Rpb24oKSB7XG4gICAgbGV0IG1hdGhJbnB1dCA9XG4gICAgICAgIE51bWJlcihkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLm1hdGhcIikudmFsdWUpO1xuXG4gICAgLy93cml0ZSBtYXRoIGlmLWVsc2UgY29uZGl0aW9uYWwgc3RhdGVtZW50IGJlbG93XG4gICAgaWYgKG1hdGhJbnB1dCA9PT0gMzApIHtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5tYXRoLW1lc3NhZ2VcIikuaW5uZXJIVE1MID0gXCJDb3JyZWN0IVwiO1xuICAgIH0gZWxzZSB7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubWF0aC1tZXNzYWdlXCIpLmlubmVySFRNTCA9IFwiV3JvbmcgQW5zd2VyXCI7XG4gICAgfVxuXG5cbn0pO1xuXG4vLyAzLiBTb2NpYWwgU3R1ZGllcyBzZWN0aW9uXG5cbnNzQnV0dG9uLm9uY2xpY2sgPSAoZnVuY3Rpb24oKSB7XG4gICAgbGV0IHNzSW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnNvY2lhbC1zdHVkaWVzXCIpLnZhbHVlO1xuICAgIC8vd3JpdGUgU1MgaWYtZWxzZSBjb25kaXRpb25hbCBzdGF0ZW1lbnQgYmVsb3dcbiAgICBpZiAoc3NJbnB1dCA9PT0gXCJBbGJhbnlcIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnNzLW1lc3NhZ2VcIikuaW5uZXJIVE1MID0gXCJDb3JyZWN0IVwiO1xuICAgIH0gZWxzZSB7XG4gICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuc3MtbWVzc2FnZVwiKS5pbm5lckhUTUwgPSBcIldyb25nIEFuc3dlclwiO1xuICAgIH1cblxuXG59KTtcblxuLy8gNC4gU2NpZW5jZSBzZWN0aW9uXG5cbnNjaWVuY2VCdXR0b24ub25jbGljayA9IChmdW5jdGlvbigpIHtcbiAgICBsZXQgc2NpZW5jZUlucHV0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zY2llbmNlXCIpLnZhbHVlO1xuICAgIGlmIChzY2llbmNlSW5wdXQgPT09IFwiU29saWRcIikge1xuICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnNjaWVuY2UtbWVzc2FnZVwiKS5pbm5lckhUTUwgPSBcIkNvcnJlY3QhXCI7XG4gICAgfSBlbHNlIHtcbiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zY2llbmNlLW1lc3NhZ2VcIikuaW5uZXJIVE1MID0gXCJXcm9uZyBBbnN3ZXJcIjtcbiAgICB9XG5cblxufSk7XG4gICAgLy9maXJzdCwgZGVjbGFyZSBhIHZhcmlhYmxlIHRoYXQgc3RvcmVzIHRoZSB2YWx1ZSBvZiB0aGUgdXNlciBpbnB1dCBpbiB0aGUgc2NpZW5jZSBzZWN0aW9uIChsb29rIGF0IGxpbmUgOSBmb3IgYW4gZXhhbXBsZSEpXG5cblxuICAgIC8vdGhlbiwgd3JpdGUgc2NpZW5jZSBpZi1lbHNlIGNvbmRpdGlvbmFsIHN0YXRlbWVudCBiZWxvd1xuXG5cblxuIl19</script></body></html>
